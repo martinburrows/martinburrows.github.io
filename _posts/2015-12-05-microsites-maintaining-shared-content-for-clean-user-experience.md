@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Microsites: Maintaining shared content for a clean user experience"
-date:   2015-12-05 21:40:00
+date:   2015-12-05 22:50:00
 categories: architecture microsites
 image:  /images/posts/microsites-maintaining-shared-content-for-clean-user-experience-0.png
 description: "Managing updates to common headers, footers and sidebars can be a challenge when working across microsite deployments. How can a change be made without re-releasing every microsite with it?"
