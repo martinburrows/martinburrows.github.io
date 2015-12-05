@@ -1,0 +1,29 @@
+# Site settings
+title: Martin Burrows
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  .NET and Web developer in London, England
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://martinburrows.net" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+github_username:  martinburrows
+highlighter: pygments
+permalink: /blog/:year/:month/:day/:title
+
+gems:
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      author: "Martin Burrows"
+
+excerpt_separator: <!--more-->
+
+comments: true
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM

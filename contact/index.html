@@ -1,0 +1,14 @@
+---
+layout: page
+title: Contact Me
+permalink: /contact/
+---
+<p>You can use the form below to contact me for any reason at all! </p>
+
+{% if jekyll.environment == 'development' %}
+	<iframe src="http://local.contact.martinburrows.net/" width="100%" height="300" style="border:0;">
+{% else %}
+	<iframe src="http://contact.martinburrows.net/" width="100%" height="300" style="border:0;">
+{% endif %}
+
+</iframe>
