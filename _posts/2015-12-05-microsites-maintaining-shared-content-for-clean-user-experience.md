@@ -11,7 +11,7 @@ Microsites. We all know how good they are for coping with the business needs of 
 
 That is - until we need to update anything common across all our sites and find our deployments go dreadfully out of sync. 
 
-[![Illustration](/images/posts/microsites-maintaining-shared-content-for-clean-user-experience-0.png)][image0]
+[![Illustration](http://martinburrows.net/images/posts/microsites-maintaining-shared-content-for-clean-user-experience-0.png)][image0]
 
 Our seamless experience transforms into a multi-branded mess, at best looking unprofessional and at worst confusing the user and driving them away. Whilst this is an extreme example, even small changes such as a simple fix to a broken link might be pushed to some sites and missed in others, not to mention the time taken to go through this process with every change and dealing with any sites which have work in progress and are not production-ready.
 
@@ -34,7 +34,7 @@ Server-side rendering
 
 The eventual solution involved using server-side includes to pull back common assets from a shared service with several layers of caching to optimise site performance. A simplified form of this is represented here: 
 
-[![Illustration](/images/posts/microsites-maintaining-shared-content-for-clean-user-experience-1.png)][image1]
+[![Illustration](http://martinburrows.net/images/posts/microsites-maintaining-shared-content-for-clean-user-experience-1.png)][image1]
 
 * A user's browser requests a web page. 
 * Our web server receives the request...  
@@ -118,7 +118,7 @@ Optimising for speed
 
 Obviously there are drawbacks to making several further requests from each microsite web server to our CS every time a page needs to be rendered and sent back to a waiting client. For this reason we utilised many layers of caching.
 
-[![Illustration](/images/posts/microsites-maintaining-shared-content-for-clean-user-experience-2.png)][image2]
+[![Illustration](http://martinburrows.net/images/posts/microsites-maintaining-shared-content-for-clean-user-experience-2.png)][image2]
 
 As mentioned already, server-side includes are used to pull down the content from the CS. These are packaged up and used on each web server. Also contained in the logic which downloads content from the CS is an in-memory caching implementation. Subsequent retrievals of the same content can be found in the cache instead of making new requests to the CS, so there is no impact on response time for anyone except the first visitor during the lifetime of the cache. An additional caching layer is used between the microsites and the CS to keep all response times at a minimum. 
 
@@ -142,6 +142,6 @@ Obviously there is far more detail not mentioned here... as ever questions, crit
 [justgiving]:      http://justgiving.com
 [follow]:      http://martinburrows.net/feed.xml
 
-[image0]:	/images/posts/microsites-maintaining-shared-content-for-clean-user-experience-0.png
-[image1]:	/images/posts/microsites-maintaining-shared-content-for-clean-user-experience-1.png
-[image2]:	/images/posts/microsites-maintaining-shared-content-for-clean-user-experience-2.png
+[image0]:	http://martinburrows.net/images/posts/microsites-maintaining-shared-content-for-clean-user-experience-0.png
+[image1]:	http://martinburrows.net/images/posts/microsites-maintaining-shared-content-for-clean-user-experience-1.png
+[image2]:	http://martinburrows.net/images/posts/microsites-maintaining-shared-content-for-clean-user-experience-2.png
