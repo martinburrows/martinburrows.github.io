@@ -69,7 +69,7 @@ When recently faced with a need for this I wrote a primitive but effective unfla
 {% highlight c# %} 
 public static class MappingExtensions
 {
-  public static void Unflatten<TType>(this IMemberConfigurationExpression<TType> config)
+  public static void Unflatten<T>(this IMemberConfigurationExpression<T> config)
   {
     config.ResolveUsing((resolutionResult, source) =>
     {
