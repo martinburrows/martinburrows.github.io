@@ -62,9 +62,9 @@ Mapper.CreateMap<FlattenedBlogPost, BlogPost>()
   .ForMember(m => m.Author, o => o.Unflatten());
 {% endhighlight %}
 
-When recently faced with a need for this I wrote a primitive but effective unflattener which infers the type involved (`Person`) and looks for properties prefixed with the property name (AuthorName, AuthorEmail) to map from. Defining the mapping for this is far simpler as every property does not need to be included - just a call to `Unflatten()` is required.
+When recently faced with a need for this I wrote a primitive but effective unflattener which infers the type involved (`Person`) and looks for properties prefixed with the property name (AuthorName, AuthorEmail) to map from. Defining the mapping for this is far simpler as every property does not need to be included - just a call to `Unflatten()` is required, which can be re-used with any type.
 
-`Unflatten` is an extension method as defined below:
+`Unflatten` is a generic extension method as defined below:
 
 {% highlight c# %} 
 public static class MappingExtensions
