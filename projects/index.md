@@ -17,7 +17,7 @@ permalink: /projects/
 <p>to become this:</p>
 
 {% highlight c#  %}
-    int mySetting = Configuration.AppSettings.MySetting; 
+    int myNumber = Configuration.AppSettings.MyNumber; 
 {% endhighlight %}
 
 <h3>What's the difference?</h3>
