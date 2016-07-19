@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introducing NiceGUID"
-date:   2016-08-18 18:40:00
+date:   2016-07-19 18:00:00
 categories: projects niceguid
 description: "Generator of nice, human-readable GUIDs for testing purposes."
 ---
